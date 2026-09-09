@@ -20,7 +20,9 @@ public class BankAccount {
 		// Return true if the withdrawal succeeds.
 		// Return false otherwise. return false;
 
-		if(balance >= 50) {
+		amount += 2 //calculate with transaction fee
+		if((balance - amount) >= 50) {
+			balance -= amount;
 			return true;
 		}
 		
